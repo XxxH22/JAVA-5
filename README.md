@@ -57,26 +57,16 @@
 
 四、实验流程
 
-1. 建立学生类
-
-设立带有修饰符private的字符串型变量name，number，team
-创建变量对应的set与get函数，用来赋值与获取
-利用toString来复写学生类，方便后面的写入文件
-
-2. 设计Test类
-1）设立StringBuffer类ReadTxt（String path）函数，用来读取并处理文件格式。
+1.建立学生类，设计Test类
+2.在学生类中创建带有修饰符private的字符串型变量name，number，team。创建变量对应的set和get函数，用来赋值与获取。利用toString来复写学生类。
+3.在test类中，设立StringBuffer类ReadTxt（String path）函数，用来读取并处理文件格式。
 利用FileInputStream将所定地址中的文件打开，并以字节形式进行读取。
 利用InputStreamReader将上述的字节流来解码为字符型。
-定义足够大的字符型数组chars。
-定义StringBuffer型变量s。
 通过遍历将B中的字符流存入C中所建立的字符型数组中。
 利用chars的数组下标和单个数组下标中的元素，通过循环将数组中的元素存入D中建立的字符串s。
 在F中的循环中添加if来判断是否在字符串中添加标点与换行。
-返回处理好的字符串s。
-
-2)设计主函数main
+4.在test类中设计主函数main
 调用ReadTxt函数。
-将函数的值赋值给变量s。
 建立while循环，利用switch和if来完成对s中出现字或词的次数查询。
 在while中建立scanner类用于用户输入所需功能代码，1为查询，2为退出。
 利用pattern和matcher方法，通过正则表达式来统计古诗中字或词出现的次数。
@@ -88,9 +78,7 @@
 将学生类对象用append添加到s中，并通过writer来写入到文件中。
 
 五、 核心代码
-
-以下代码展示了Java如何读取文件，如何处理文件中的字符串，利用字节流来读取文件，以及用字符流来将字节转换为字符，并将字符流存储在字符型数组中，并结合数组下标来将处理好的字符赋值在动态字符串中。
-
+展示了Java如何读取文件，如何处理文件中的字符串，利用字节流来读取文件。
 public static StringBuffer ReadTxt(String path) {
         StringBuffer s = new StringBuffer();
         // 读取文件内容 (输入流)
@@ -119,4 +107,7 @@ public static StringBuffer ReadTxt(String path) {
         return s;
     }
 六、 实验结果
-![]()
+![](https://github.com/XxxH22/JAVA-5/blob/main/运行截图.png)
+
+七、实验感受
+在本次实验中，我感受到了用JAVA写代码处理数据的便捷之处，同时学会了replace方法将字符串替换为空的方法，基本掌握字符串Sring的读和写入的方法，对于scanner的函数实例化更加理解。我还进一步掌握并使用Object根类的toString（）方法,应用在相关对象的信息输出中并在程序中根据输入情况做异常处理，基本掌握了文件的读取/写入方法。
